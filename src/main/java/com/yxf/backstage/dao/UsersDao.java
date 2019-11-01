@@ -16,19 +16,19 @@ public interface UsersDao {
 	/**
      * 通过名字查询用户信息
      */
-    @Select("SELECT * FROM users WHERE user_name = #{name}")
+    @Select("SELECT user_name,nick_name, password,phone,tel,create_time,create_by,update_time,update_by FROM users WHERE user_name = #{name}")
     Users findUserByName(@Param("name") String name);
 
     /**
      * 通过名字查询用户信息
      */
-    @Select("SELECT * FROM users WHERE user_name = #{name} and password = #{password}")
+    @Select("SELECT user_name,nick_name, password,phone,tel,create_time,create_by,update_time,update_by FROM users WHERE user_name = #{name} and password = #{password}")
     Users loginUser(@Param("name") String name,@Param("password") String password);
     
     /**
      * 查询所有用户信息
      */
-    @Select("SELECT * FROM users")
+    @Select("SELECT user_name,nick_name, password,phone,tel,create_time,create_by,update_time,update_by FROM users")
     List<Users> findAllUser();
 
     /**
