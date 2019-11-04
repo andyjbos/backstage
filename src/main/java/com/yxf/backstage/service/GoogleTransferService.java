@@ -1,8 +1,7 @@
 package com.yxf.backstage.service;
 
-import org.springframework.stereotype.Service;
+import java.util.Map;
 
-@Service
 public interface GoogleTransferService {
-
+	Map<String,String> getGoogleLanguage(String text, String targetLang);
 }

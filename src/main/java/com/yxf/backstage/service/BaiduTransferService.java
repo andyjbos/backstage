@@ -1,8 +1,7 @@
 package com.yxf.backstage.service;
 
-import org.springframework.stereotype.Service;
+import java.util.Map;
 
-@Service
 public interface BaiduTransferService {
-
+	Map<String,String> getBaiduLanguages(String text,String targetLang);
 }
